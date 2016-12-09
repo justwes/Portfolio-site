@@ -5,6 +5,7 @@ $colour3: #00E2AC;
 $colour4: #EEFDF9;
 $white: white;
 $black: black;
+$light-blue: #00CFFF;
 
 .hero {
   font-family: "Roboto", serif;
@@ -58,7 +59,82 @@ $black: black;
   }
 }
 
+#sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 0px;
+  height: 100%;
+  padding-top: 10px;
+  color: white;
+  font-family: "Roboto", Serif;
+  background: #000;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.5s ease;
 
+  h2 {
+      padding: 0px;
+      margin: 4px;
+      font-size: 40px;
+      line-height: 40px;
+    }
+  a {
+      color: white;
+      margin-left: 10px;
+      font-size: 24px;
+    }
+  &.open {
+      width: 320px !important;
+    }
+  .sidebar-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#hamburger {
+  display: flex;
+  cursor: pointer;
+  position: fixed;
+  height: 34px;
+  width: 40px;
+  left: 30px;
+  top: 20px;
+  z-index: 1;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  &:hover {
+    background: $light-blue;
+  }
+}
+
+#close-btn {
+  align-self: flex-start;
+  margin-left: 30px;
+  margin-top: 10px;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 .cta {
   background-color: $black;
@@ -155,7 +231,7 @@ $black: black;
     &:hover {
       opacity: .5;
     }
-  }  
+  }
 }
 
 
